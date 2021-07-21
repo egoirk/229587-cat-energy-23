@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
-* Студент: [Евгений Петров](https://up.htmlacademy.ru/adaptive/23/user/229587).
-* Наставник: `Неизвестно`.
+- Студент: [Евгений Петров](https://up.htmlacademy.ru/adaptive/23/user/229587).
+- Наставник: [Виктор Кан](https://htmlacademy.ru/profile/viktorkan).
 
 ---
 
