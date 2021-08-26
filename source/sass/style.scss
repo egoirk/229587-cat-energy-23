@@ -5,20 +5,17 @@
 @import "global/fonts.scss";
 
 //Blocks
+@import "blocks/visually-hidden.scss";
 @import "blocks/page.scss";
-@import "blocks/page-header.scss";
-@import "blocks/main-nav.scss";
-@import "blocks/page-main.scss";
 @import "blocks/main-header.scss";
 @import "blocks/purpose.scss";
 @import "blocks/description.scss";
 @import "blocks/example.scss";
 @import "blocks/map.scss";
 @import "blocks/page-footer.scss";
-@import "blocks/social.scss";
-@import "blocks/copyright.scss";
 @import "blocks/button.scss";
 @import "blocks/catalog.scss";
 @import "blocks/more.scss";
 @import "blocks/additional-goods.scss";
+@import "blocks/program.scss";
 @import "blocks/form.scss";

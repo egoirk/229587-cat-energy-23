@@ -11,6 +11,9 @@
   margin: 0 auto;
   padding-top: 27px;
   padding-bottom: 22px;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
 }
 
 .main-header__text {
@@ -23,12 +26,28 @@
   background-position: top center;
   background-repeat: no-repeat;
   color: var(--basic-white);
+  font-family: var(--special-font);
+  text-align: center;
 }
 
 .main-header__title {
   text-transform: none;
   font-size: 36px;
   line-height: 36px;
+  font-weight: 400;
+  margin: 0;
+  padding: 27px 0 0;
+}
+
+.main-header__paragraf {
+  font-size: 14px;
+  line-height: 14px;
+  margin: 0;
+  padding: 25px 0 0;
+}
+
+.main-header__img {
+  margin-top: -135px;
 }
 
 .main-header__button {
