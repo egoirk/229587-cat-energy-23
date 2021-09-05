@@ -42,3 +42,38 @@
   margin: 0;
   padding: 15px 0 18px 19px;
 }
+
+@media (min-width: $tablet-width) {
+  .purpose__title {
+    padding: 77px 0 0 53px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .purpose__paragraph {
+    width: 340px;
+    padding: 24px 0 0 52px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .purpose__button {
+    padding: 48px 0 18px 52px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .purpose__wrapper {
+    padding: 0 110px 0;
+  }
+
+  .purpose__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .purpose__item {
+    width: 570px;
+  }
+}
