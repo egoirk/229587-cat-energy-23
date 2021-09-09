@@ -1,12 +1,25 @@
 .example {
+  position: relative;
   font-size: 14px;
   line-height: 18px;
 }
 
 .example__wrapper {
-  background-color: var(--grey-bg);
   padding: 27px 20px 0 20px;
   margin: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 100vw;
+    height: 100%;
+    background: var(--grey-bg);
+    z-index: -1;
+  }
 }
 
 .example__title {
@@ -97,6 +110,10 @@
 @media (min-width: $tablet-width) {
   .example__wrapper {
     padding: 0;
+
+    &::before {
+      background: none;
+    }
   }
 
   .example__title {
@@ -154,38 +171,81 @@
     line-height: 20px;
   }
 
+  .example__changes {
+    position: relative;
+  }
+
   .example__changes--range {
     padding-bottom: 64px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      width: 100vw;
+      height: 100%;
+      background: var(--grey-bg);
+      z-index: -1;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .example__wrapper {
-    background-color: var(--basic-grey);
     padding: 0;
-    margin: 0;
+    margin-top: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      width: 100vw;
+      height: 100%;
+      background: var(--basic-grey);
+      z-index: -1;
+    }
   }
 
   .example__title {
-    padding: 69px 0 76px 110px;
+    padding: 69px 110px 0;
+    margin: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      width: 100vw;
+      height: 205px;
+      background: var(--basic-white);
+      z-index: -1;
+    }
   }
 
   .example__paragraph {
     font-size: 16px;
     line-height: 24px;
-    padding: 70px 0 0 110px;
-    margin: 0;
-    background-color: var(--basic-grey);
+    padding: 70px 110px 0;
+    margin-top: 76px;
     width: 436px;
+    background: none;
   }
 
   .example__list {
-    background-color: var(--basic-grey);
     width: 436px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    padding: 54px 31px 75px 110px;
+    padding: 69px 110px 0;
+    background: none;
   }
 
   .example__description {
@@ -197,6 +257,7 @@
     flex-direction: row;
     margin: 0;
     padding-top: 55px;
+    padding-bottom: 75px;
   }
 
   .example__value--price,
@@ -207,6 +268,10 @@
 
   .example__changes--range {
     padding-bottom: 64px;
+
+    &::before {
+      background: none;
+    }
   }
 
   .example__description--price {

@@ -9,9 +9,9 @@
 
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo"><img src="img/logo_m.svg" width="202" height="59" alt="Энергичный кот. Наш логотип"></a>
+      <a class="page-header__logo"><img src="img/logo_m.svg" width="191" height="37" alt="Энергичный кот. Наш логотип"></a>
 
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
@@ -25,11 +25,9 @@
     <main class="page-main">
       <section class="main-header">
         <div class="main-header__wrapper">
-          <div class="main-header__text">
-            <h1 class="main-header__title">Функциональное питание для котов</h1>
-            <p class="main-header__paragraf">Занялся собой? Займись котом!</p>
-          </div>
-          <img class="main-header__img" src="img/bg_m.png" width="280" height="270" alt="Ярко оранжевая банка с питанием для котов. Из курицы.">
+          <h1 class="main-header__title">Функциональное питание для котов</h1>
+          <p class="main-header__paragraf">Занялся собой? Займись котом!</p>
+          <img class="main-header__img" src="img/promo_m.png" width="280" height="270" alt="Ярко оранжевая банка с питанием для котов. Из курицы.">
           <a class="button main-header__button" href="program.html">подобрать программу</a>
         </div>
       </section>
@@ -95,7 +93,10 @@
           <p class="map__dealer">приглашаем к сотрудничеству дилеров!</p>
           <p class="map__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
-        <img class="map__img" src="img/map.png" width="320" height="362" alt="Как к нам попасть">
+        <div class="map__wrapper">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A09cca4389b4aed87f754e5526aecc4a067163185e69abd4e799ee56418e030ac&amp;source=constructor" width="100%" height="362" frameborder="0"></iframe>
+        </div>
+
       </section>
 
     </main>
@@ -121,5 +122,6 @@
       </div>
     </footer>
 
+  <script src="js/toggle.js"></script>
   </body>
 </html>
