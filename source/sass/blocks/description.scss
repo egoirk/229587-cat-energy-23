@@ -32,3 +32,33 @@
 .description__item:last-child {
   padding-bottom: 42px;
 }
+
+@media (min-width: $tablet-width) {
+  .description__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .description__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .description__item {
+    padding: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .description__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  .description__wrapper {
+    padding: 0;
+    margin: 71px 0 0 110px;
+  }
+}

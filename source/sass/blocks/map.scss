@@ -1,3 +1,15 @@
+.map {
+  position: relative;
+}
+
+.map__wrapper {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .map__description {
   display: flex;
   justify-content: space-between;
@@ -24,4 +36,33 @@
   line-height: 20px;
   margin: 0;
   padding-right: 19px;
+}
+
+@media (min-width: $desktop-width) {
+  .map__description {
+    position: absolute;
+    align-items: center;
+    width: 570px;
+    height: 201px;
+    z-index: 1;
+    top: 25%;
+    left: 5%;
+    padding: 0;
+    margin: 0;
+    background-color: var(--basic-white);
+  }
+
+  .map__dealer {
+    width: 163px;
+    margin: 0;
+    padding: 0;
+    padding-left: 76px;
+  }
+
+  .map__address {
+    width: 155px;
+    margin: 0;
+    padding: 0;
+    padding-right: 89px;
+  }
 }
