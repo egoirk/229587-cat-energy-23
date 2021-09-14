@@ -146,7 +146,20 @@
     padding-bottom: 10px;
   }
 
+  .main-nav__item--active-inner-pages {
+    border-bottom: 2px solid var(--basic-green);
+    padding-bottom: 10px;
+  }
+
+  .main-nav__list {
+    background: none;
+  }
+
   .main-nav__list a {
     color: var(--basic-white);
+  }
+
+  .main-nav__list--black a {
+    color: var(--basic-black);
   }
 }
