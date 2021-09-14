@@ -1,8 +1,12 @@
 .page__body {
-  position: relative;
   margin: 0 auto;
   padding: 0;
   width: 320px;
+}
+
+.page__body--bg {
+  position: relative;
+
   min-height: 100%;
 
   &::before {
@@ -29,7 +33,9 @@
   .page__body {
     width: 768px;
     margin: 0 auto;
+  }
 
+  .page__body--bg {
     &::before {
       background: none;
     }
@@ -40,7 +46,9 @@
   .page__body {
     width: 1440px;
     margin: 0 auto;
+  }
 
+  .page__body--bg {
     &::before {
       content: "";
       position: absolute;
