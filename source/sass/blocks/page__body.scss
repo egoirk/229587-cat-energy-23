@@ -1,7 +1,6 @@
 .page__body {
   margin: 0 auto;
   padding: 0;
-  width: 320px;
 }
 
 .page__body--bg {
@@ -9,23 +8,35 @@
 
   min-height: 100%;
 
-  &::before {
-    content: "";
-    position: absolute;
-    box-sizing: border-box;
-    left: 0;
-    top: 65px;
-    z-index: -1;
-    display: block;
-    width: 320px;
-    height: 302px;
-    background-image: linear-gradient(
-        rgba(104, 183, 56, 0.85),
-        rgba(104, 183, 56, 0.85)
-      ),
-      url("../img/bg.png");
-    background-position: top center;
-    background-repeat: no-repeat;
+  @media (max-width: $tablet-width) {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 302px;
+      top: 65px;
+      z-index: -1;
+
+      background-color: #4d4c51;
+      background-image: linear-gradient(
+          to top,
+          rgba(104, 183, 56, 0.85),
+          rgba(104, 183, 56, 0.85)
+        ),
+        url("../img/bg.jpg");
+      background-repeat: no-repeat;
+      background-position: top center;
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(
+            to top,
+            rgba(104, 183, 56, 0.85),
+            rgba(104, 183, 56, 0.85)
+          ),
+          url("../img/bg@2x.jpg");
+        background-size: auto 302px;
+      }
+    }
   }
 }
 

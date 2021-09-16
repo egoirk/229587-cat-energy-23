@@ -2,21 +2,23 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Католог продукции. Кэт энерджи</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo"><img src="img/logo.svg" width="202" height="59" alt="Энергичный кот. Наш логотип"></a>
+      <a class="page-header__logo"><img src="img/logo_m.svg" width="191" height="37" alt="Энергичный кот. Наш логотип"></a>
 
-      <nav class="main-nav">
+
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list main-nav__list--black">
-            <li class="main-nav__item"><a href="index.html">Главная</a></li>
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a>Главная</a></li>
             <li class="main-nav__item"><a href="catalog.html">Каталог продукции</a></li>
-            <li class="main-nav__item main-nav__item--active-inner-pages"><a href="program.html">Подбор программы</a></li>
+            <li class="main-nav__item  main-nav__item--active-inner-pages"><a href="program.html">Подбор программы</a></li>
           </ul>
         </div>
       </nav>
@@ -28,42 +30,52 @@
       </section>
 
       <section class="form">
-        <div class="form_wrapper">
+        <div class="form__wrapper">
           <form class="form__filter" method="get" action="https://echo.htmlacademy.ru" target="_blank">
-            <fieldset class="form__fieldset">
-              <legend class="visually-hidden">Данные вашего пушистика</legend>
-              <ul class="form__list">
-                <li class="form__item">
-                  <label class="form__label" for="name">Имя:*</label>
-                  <input class="form__input" id="name" type="text" name="name" placeholder="Барсик" required>
-                </li>
-                <li class="form__item">
-                  <label class="form__label" for="weight">Вес (кг):*</label>
-                  <input class="form__input" id="weight" type="number" name="weight" placeholder="7" required>
-                </li>
-                <li class="form__item">
-                  <label class="form__label" for="age">Возраст (лет):</label>
-                  <input class="form__input" id="age" type="number" name="age" placeholder="7">
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="form__fieldset">
-              <legend class="visually-hidden">Выбор программы</legend>
-              <ul class="form__list">
-                <li class="form__item">
-                  <input class="form__radio" id="slim" type="radio" name="program" value="slim" checked>
-                  <label class="form__label" for="slim">Похудение</label>
-                </li>
-                <li class="form__item">
-                  <input class="form__radio" id="weight-gain" type="radio" name="program" value="weight-gain">
-                  <label class="form__label" for="weight-gain">Набор массы</label>
-                </li>
-                <li class="form__item">
-                  <input class="form__radio" id="unknown" type="radio" name="program" value="unknown">
-                  <label class="form__label" for="unknown">Не знаю (нужен ваш совет)</label>
-                </li>
-              </ul>
-            </fieldset>
+
+            <div class="form__filter--wrapper">
+              <fieldset class="form__fieldset">
+                <legend class="visually-hidden">Данные вашего пушистика</legend>
+                <div class="form__fieldset-parameters">
+                  <div class="form__fieldset-list">
+                    <ul class="form__list">
+                      <li class="form__item">
+                        <label class="form__label" for="name">Имя:*</label>
+                        <input class="form__input" id="name" type="text" name="name" placeholder="Барсик" required>
+                      </li>
+                      <li class="form__item">
+                        <label class="form__label" for="weight">Вес (кг):*</label>
+                        <input class="form__input" id="weight" type="number" name="weight" placeholder="7" required>
+                      </li>
+                      <li class="form__item">
+                        <label class="form__label" for="age">Возраст (лет):</label>
+                        <input class="form__input" id="age" type="number" name="age" placeholder="7">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="form__fieldset">
+                <legend class="visually-hidden">Выбор программы</legend>
+                <div class="form__fieldset-radio">
+                  <ul class="form__list">
+                    <li class="form__item">
+                      <input class="form__radio" id="slim" type="radio" name="program" value="slim" checked>
+                      <label class="form__label" for="slim">Похудение</label>
+                    </li>
+                    <li class="form__item">
+                      <input class="form__radio" id="weight-gain" type="radio" name="program" value="weight-gain">
+                      <label class="form__label" for="weight-gain">Набор массы</label>
+                    </li>
+                    <li class="form__item">
+                      <input class="form__radio" id="unknown" type="radio" name="program" value="unknown">
+                      <label class="form__label" for="unknown">Не знаю (нужен ваш совет)</label>
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
+            </div>
+
             <fieldset class="form__fieldset">
               <legend class="form__legend">Контактные данные (владельца кота)</legend>
               <ul class="form__list">
@@ -83,7 +95,7 @@
             </fieldset>
             <fieldset class="form__fieldset">
               <legend class="form__legend">Дополнительно</legend>
-              <ul class="form__list">
+              <ul class="form__list form__fieldset-additionally">
                 <li class="form__item">
                   <input class="form__checkbox" id="sweetener" type="checkbox" name="sweetener" checked>
                   <label class="form__label" for="sweetener">Сахарозаменитель</label>
@@ -104,7 +116,7 @@
             </fieldset>
 
             <button class="form__button button" type="submit">Отправить заявку</button>
-            <p class="form__paragraph">* — Обязательные поля</p>
+            <p class="form__footnote">* — Обязательные поля</p>
           </div>
         </form>
       </section>
@@ -140,6 +152,6 @@
         </div>
       </div>
     </footer>
-
+    <script src="js/toggle.js"></script>
   </body>
 </html>

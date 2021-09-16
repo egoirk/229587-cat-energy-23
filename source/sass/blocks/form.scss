@@ -6,7 +6,7 @@
   text-transform: uppercase;
 }
 
-.form_wrapper {
+.form__wrapper {
   margin: 0;
   padding: 0 20px;
 }
@@ -23,4 +23,122 @@
   background-color: var(--basic-green);
   font-weight: 400;
   font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 21px;
+}
+
+.form__fieldset {
+  border: none;
+  font-family: var(--basic-font);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  margin: 0;
+  padding: 0;
+
+  & label,
+  & input,
+  & textarea {
+    text-transform: uppercase;
+  }
+}
+
+.form__fieldset input::placeholder {
+  color: var(--special-dark);
+}
+
+.form__fieldset-list {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--basic-border);
+}
+
+.form__fieldset-radio {
+  padding: 28px 0 25px 0;
+  border-bottom: 1px solid var(--basic-border);
+}
+
+.form__fieldset-additionally {
+  margin-bottom: 34px;
+}
+
+.form__footnote {
+  margin: 0;
+  padding: 0;
+  display: block;
+  color: var(--basik-black);
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .form__button {
+    font-size: 20px;
+    line-height: 20px;
+    width: 282px;
+    margin-bottom: 0;
+    margin-right: 61px;
+    padding: 16px;
+  }
+
+  .form__fieldset {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .form__fieldset-list {
+    padding-bottom: 72px;
+    border: none;
+  }
+
+  .form__fieldset-radio {
+    width: 630px;
+    margin: 0 auto;
+    padding: 33px 0 32px 0;
+    border: 1px solid var(--basic-border);
+  }
+
+  .form__fieldset-additionally {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 42px;
+    column-gap: 60px;
+    margin-bottom: 54px;
+  }
+
+  .form__footnote {
+    font-size: 16px;
+    line-height: 16px;
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__filter--wrapper {
+    width: 1220px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form__fieldset-list {
+    width: 569px;
+    padding-bottom: 0;
+  }
+
+  .form__fieldset-radio {
+    width: auto;
+  }
+
+  .form__fieldset-additionally {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 80px;
+    margin-bottom: 70px;
+  }
+
+  .form__button {
+    width: 568px;
+    margin-right: 81px;
+  }
 }
