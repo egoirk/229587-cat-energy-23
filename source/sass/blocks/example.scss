@@ -2,10 +2,11 @@
   position: relative;
   font-size: 14px;
   line-height: 18px;
+  width: 100%;
 }
 
 .example__wrapper {
-  padding: 27px 20px 0 20px;
+  padding: 27px 20px 0;
   margin: 0;
 
   &::before {
@@ -18,7 +19,7 @@
     width: 100vw;
     height: 100%;
     background: var(--grey-bg);
-    z-index: -1;
+    z-index: -10;
   }
 }
 
@@ -96,20 +97,10 @@
   margin-left: 2px;
 }
 
-.example__changes {
-  text-align: center;
-  margin: 0;
-  padding: 42px 0 0;
-}
-
-.example__changes--range {
-  margin: 0;
-  padding: 23px 0 25px;
-}
-
 @media (min-width: $tablet-width) {
   .example__wrapper {
     padding: 0;
+    border-top: 1px solid #e6e6e6;
 
     &::before {
       background: none;
@@ -170,51 +161,19 @@
     font-size: 20px;
     line-height: 20px;
   }
-
-  .example__changes {
-    position: relative;
-  }
-
-  .example__changes--range {
-    padding-bottom: 64px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      display: block;
-      width: 100vw;
-      height: 100%;
-      background: var(--grey-bg);
-      z-index: -1;
-    }
-  }
 }
 
 @media (min-width: $desktop-width) {
   .example__wrapper {
-    padding: 0;
+    padding: 69px 110px 0;
     margin-top: 0;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      display: block;
-      width: 100vw;
-      height: 100%;
-      background: var(--basic-grey);
-      z-index: -1;
-    }
+    border-top: none;
+    position: relative;
   }
 
   .example__title {
-    padding: 69px 110px 0;
-    margin: 0;
+    padding: 0;
+    margin-bottom: 76px;
 
     &::before {
       content: "";
@@ -222,9 +181,9 @@
       top: 0;
       left: 50%;
       transform: translateX(-50%);
-      display: block;
+
       width: 100vw;
-      height: 205px;
+      height: 100%;
       background: var(--basic-white);
       z-index: -1;
     }
@@ -266,20 +225,7 @@
     line-height: 20px;
   }
 
-  .example__changes--range {
-    padding-bottom: 64px;
-
-    &::before {
-      background: none;
-    }
-  }
-
   .example__description--price {
     margin-left: 63px;
-  }
-
-  .example__changes {
-    margin-top: -383px;
-    margin-left: 300px;
   }
 }

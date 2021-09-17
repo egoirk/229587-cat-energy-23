@@ -39,6 +39,11 @@
 .additional-goods__item {
   border-top: 1px solid var(--catalog-border);
   margin: 13px 20px 19px;
+
+  &:last-child {
+    border-bottom: 1px solid var(--catalog-border);
+    padding-bottom: 19px;
+  }
 }
 
 .additional-goods__name {
@@ -119,6 +124,19 @@
 
 @media (min-width: $tablet-width) {
   .additional-goods__wrapper {
-    padding: 13px 20px 0;
+    padding: 0;
+  }
+
+  .additional-goods__title {
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0 0 80px 0;
+    position: relative;
+    padding-left: 30px;
+  }
+
+  .additional-goods__bg {
+    padding-left: 37px;
+    padding-right: 36px;
   }
 }

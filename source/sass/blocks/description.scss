@@ -5,13 +5,13 @@
 }
 
 .description__wrapper {
-  padding: 7px 21px 0 20px;
+  padding: 7px 20px 0;
   margin: 0;
 }
 
 .description__title {
   margin: 0;
-  padding-bottom: 38px;
+  margin-bottom: 38px;
   font-family: var(--special-font);
   font-weight: 400;
   color: var(--basic-black);
@@ -23,30 +23,98 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-bottom: 42px;
 }
 
 .description__item {
-  padding: 0 0 24px 80px;
-}
+  padding: 0;
+  margin: 0;
+  margin-left: 80px;
+  position: relative;
+  min-height: 54px;
+  margin-bottom: 20px;
 
-.description__item:last-child {
-  padding-bottom: 42px;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: var(--basic-green);
+    background-position: center;
+    left: -80px;
+  }
+
+  &--leaf {
+    &::before {
+      background-image: url("../img/icon_leaf.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--tub {
+    &::before {
+      background-image: url("../img/icon_tub.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--eat {
+    &::before {
+      background-image: url("../img/icon_eat.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--scales {
+    &::before {
+      background-image: url("../img/icon_scales.svg");
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
   .description__title {
     font-size: 60px;
     line-height: 60px;
+    margin-bottom: 72px;
   }
 
   .description__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 77px;
+    counter-reset: item;
+    position: relative;
   }
 
   .description__item {
     padding: 0;
+    margin: 111px 0 57px;
+    width: 250px;
+    position: relative;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      top: -111px;
+      left: 0;
+    }
+
+    &::after {
+      position: absolute;
+      top: -20px;
+      right: 0;
+      min-width: 135px;
+      display: block;
+      counter-increment: item;
+      content: counter(item);
+      font-family: var(--special-font);
+      font-size: 280px;
+      color: var(--basic-grey);
+      z-index: -1;
+    }
   }
 }
 
@@ -54,11 +122,11 @@
   .description__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
+    column-gap: 77px;
   }
 
   .description__wrapper {
-    padding: 0;
-    margin: 71px 0 0 110px;
+    padding: 71px 0 0 110px;
+    margin: 0;
   }
 }
